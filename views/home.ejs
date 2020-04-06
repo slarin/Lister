@@ -1,0 +1,660 @@
+<style>
+/*waves background*/
+.waves-header {
+  background: linear-gradient(60deg, #d4418e 0%, #0652c5 100%);
+  color:white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.waves {
+  position:relative;
+  width: 100%;
+  height:30vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+.waves-content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+/* Waves Animation */
+.waves-parallax { height: inherit; }
+.waves-parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.waves-parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.waves-parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.waves-parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.waves-parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.hero {
+  height: 100vh;
+  background-color:rgba(51, 51, 51, 0.356);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.144) 2px 6px 6px;
+}
+.logo-hldr {
+  border-radius: 4px;
+  height: 5vh;
+  width: 3vw;
+  max-width: 10vw;
+  margin: 5vh 0 0 0;
+  z-index: 2;
+}
+.logo {
+  height: inherit;
+  width: inherit;
+  max-width: inherit;
+}
+#banner-txt {
+  height: auto;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: end;
+  font-size: 2.5em;
+  color: #ffffff;
+  max-width: 60vw;
+  margin: 35vh 10vw 10vh 10vw;
+  display: block;
+  -webkit-animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
+  z-index: 2;
+}
+
+ @-webkit-keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cta {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 10vw 0 20vw;
+  height: auto;
+  justify-content: flex-end;
+  align-items: center;
+  animation: slideUp1 4s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.oars {
+  margin: 0 5px;
+  border: 2px solid #fdfdfd;
+  background-color: #fdfdfd;
+  color: #3d3d3d;
+  padding: 2px;
+}
+.oars:hover {
+  background-color: #ff007b;
+  border: 2px solid #ff007b;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.faq {
+  color: #ffffff;
+}
+.faq:hover {
+  text-decoration: underline #ffffff !important;
+}
+@keyframes slideUp1 {
+  from {
+    margin-top: 100%;
+    color: red;
+  }
+  to {
+    margin-top: 0%;
+    color: black;
+  }
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: #5c5c5c;
+}
+.parallax{
+  min-height: 40vh;
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image: url(/images/water.jpg);
+}
+.sell {
+  min-height: 40vh;
+}
+.title-txt {
+  margin: 10px;
+  font-size: 1.2em;
+}
+.ja-gy {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.desp-img {
+  height: inherit;
+  width: inherit;
+}
+.jacket-div {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 10px 35px 35px 10px;
+}
+.jacket-div>img {
+  border-radius: 10px 35px 35px 10px;
+}
+.gyro-div {
+  width: 40vw;
+  height: 60vh;
+  border-radius: 10px 10px 35px 35px;
+}
+.gyro-div>img {
+  border-radius: 10px 10px 35px 35px;
+}
+.quip {
+  font-size: 0.9rem;
+}
+.sailors-div {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  height: auto;
+  align-items: center;
+  margin: 10px 30px;
+}
+.sailors {
+  width: 60vw;
+  height: 70vh;
+}
+
+.tech {
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 5vw;
+  background-color: #090b0e;
+  box-shadow: rgba(0, 0, 0, 0.144) 2px 6px 6px;
+}
+.tech>p { text-align: right; color: #ff007b; }
+.eng-div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.engines {
+  width: 45vw;
+  height: 80vh;
+}
+.eng-div p {
+  margin: 80px 0;
+  color: #ff007b;
+}
+.poly {
+  width: 40vw;
+  height: 60vh;
+}
+
+.rapture {
+  background-color: rgba(255, 255, 255, 0.555);
+}
+.rains {
+  margin: 0 5vw;
+  width: 100%;
+  height: 50vh;
+}
+.trumpet {
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+}
+.add-btn {
+  height: 53px;
+  width: 335px;
+  font-size: 40px;
+  margin-top: 50px;
+  align-self: center;
+  text-align: center;
+  border: 2px solid #3d3d3d;
+}
+
+.help {
+  height: 30vh;
+  margin: 20vh 0 0 0;
+  padding: 0 5vw;
+}
+.p-contact {
+  margin: 0;
+}
+.pink { color: #ff007b;}
+
+.footer{
+	margin:20% 10% -15% 10%;
+	border:1px solid #f6f8f9;
+	border-radius:5px 5px 0px 0px;
+	background-color:#f6f8f9;
+	padding:1.5%;
+  font-size: 0.6em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+
+@media(min-width: 1300px) {
+  #banner-txt {
+    margin-left: 20vw;
+  }
+}
+
+@media(max-width: 800px) {
+ .ja-gy { margin: 10px; }
+ .jacket-div {
+   width: 30vw;
+   height: 25vh;
+ }
+ .gyro-div {
+   width: 50vw;
+ }
+ .sailors { height: 45vh; }
+ .engines {
+   width: 55vw;
+   height: 40vh;
+ }
+ .poly {
+   height: 40vh;
+   width: 45vw;
+ }
+ .trumpet { align-self: center; }
+ .add-btn {
+   font-size: 30px;
+   width: 280px;
+ }
+}
+@media(max-width: 500px) {
+  #banner-txt {
+    font-size: 1.8em;
+    margin: 25vh 10vw 10vh 10vw;
+  }
+  .content { font-size: 15px; }
+  .gyro-div { height: 65vh; }
+  .sailors { height: 40vh; }
+  .eng-div p { margin: 20px; }
+  .rains { 
+    height: 40vh;
+    width: auto;
+    margin: auto;
+  }
+  .rains>.desp-img { width: 85vw; }
+  .quip {
+    font-size: 0.7rem;
+    opacity: 0.85;
+  }
+}
+@media(max-width: 380px) {
+  .jacket-div p { margin-left: 10px; }
+  #banner-txt { font-size: 1.8em; }
+  .cta { 
+    margin: 5vh 10vw 0 0;
+    font-size: 0.8em;
+  }
+}
+/*Waves-mobileDevices*/
+@media (max-width: 768px) {
+  .waves-inner-header {
+    height: 10vh;
+  }
+  .waves {
+    height: 20vh;
+    min-height: 20vh;
+  }
+}
+
+</style>
+<!--waves-background-->
+<div class="waves-header">
+  <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="waves-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!--<video class="video" autoplay loop muted playsinline>
+  <source src="/images/flood_Trim.mp4" type="video/mp4">
+</video>-->
+<div class="hero">
+  <div id="logo-holder" class="logo-hldr">
+  <img src="./images/logo.png" class="logo"/>
+  </div>
+    
+  <div class="banner-container">
+    <div id="banner-txt" class="banner-txt wave">
+      We are the most reasonable option,<br>
+      when the rains turn Lagos<br>
+      to a dirty Venice. Again.
+    </div>
+
+    <div class="cta">
+      <div class="oars">
+        <a href="/users/login">Pick up an Oar</a>
+      </div>
+      <div class="faq">
+        <a href="/faq">Learn more</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="content">
+  <div class="parallax"></div>
+  <div class="sell">
+    <p class="title-txt">Your safety is paramount to us.</p>
+    <div class="ja-gy">
+      <div>
+        <div class="jacket-div"><img src="/images/family.jpg" alt="life jacket" class="desp-img"/></div>
+        <p>from the very best life jackets,</p>
+      </div>
+      <div>
+          <div class="gyro-div"><img src="/images/gyro2.jpg" alt="gyroscope" class="desp-img"/></div>
+          <p>to first class gyroscopes - <span class="quip">our <br/>canoes will not capsize, we assure you.</span></p>
+      </div>
+    </div>
+    <div class="sailors-div">
+      <div class="sailors"><img src="/images/sailors2.jpg" alt="sailors" class="desp-img"/></div>
+      <p>and sailors that have undergone the most rigorous training.<br/>-<span class="quip">they don't even swear anymore.</span></p>
+    </div>
+  </div>
+  <div class="parallax"></div>
+  <div class="sell">
+    <div class="tech">
+      <p>we're proud about our tech<br/>-<span class="quip">so we flaunt it</span></p>
+      <div class="eng-div">
+        <div class="engines"><img src="/images/engine2.gif" alt="engines" class="desp-img"/></div>
+        <div>
+          <p>canoes deserve<br/>engines too. -<br/><span class="quip">look ma! no oars!</span></p>
+          <p>fully electrical -<br/>zero emissions</p>
+        </div>
+      </div>
+      <div class="eng-div">
+        <div>
+          <p>polycarbonate composite body - <br/>hard as steel, light as a sack of feathers.</p>
+        </div>
+        <div class="poly"><img src="images/material2.jpg" alt="material" class="desp-img"/></div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"></div>
+  <div class="sell">
+    <div class="rapture tech">
+      <div class="eng-div">
+        <div class="rains"><img src="/images/rains.jpg" alt="rains" class="desp-img"/></div>
+      </div>
+      <div class="trumpet">
+        <p>the rains will comeback, and the streets of Lagos will be<br/> flooded again.</p>
+        <p>Let us take you home when the time comes.</p>
+        <p>Join our Beta program and be first in line when the<br/> storms arrive.</p>
+        <div class="add-btn oars"><a href="/users/register">ADD me up!</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"></div>
+  <div class="sell">
+    <div class="help">
+      <p>feeling a bit bewildered? don't worry, we have an <a href="/faq" class="pink">FAQ</a></p>
+      <div class="ja-gy">
+        <p>OR, if you'd rather reach us directly:</p>
+        <div class="trumpet">
+          <p class="p-contact"><span class="pink"><a href="tel:080077766600">0800-777-66-600</a></span></p>
+          <p class="p-contact"><span class="pink"><a href="mailto:ocanoe@hotmail.com">ocanoe@hotmailcom</a></span></p>
+          <p class="p-contact"><span class="pink"><a href="https://maps.google.com/?q=53.3498,6.2603&t=m">road 1, sleepy hollow, Dublin, ireland</a></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p> We would like to thank the incompetence of various governments for making this possible. </p>
+</div>
