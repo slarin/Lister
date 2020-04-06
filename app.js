@@ -5,7 +5,7 @@ const path = require('path');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-require('dotenv').config();
+if(app.get('env') == 'development'){require('dotenv').config();}
 
 const app = express();
 app.use(express.static(path.join(__dirname, '/public')));
@@ -26,7 +26,8 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 // Bodyparser
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Express session
 app.use(session({
