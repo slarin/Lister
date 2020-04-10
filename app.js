@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 require('./config/passport')(passport);
 
 // Database Configuration
-const db = require('./config/keys').MongoURI;
+const db = process.env.MongoURI;
 
 // Connect to MongoDB
 mongoose.connect(db, { useNewUrlParser: true})
@@ -26,8 +26,7 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 // Bodyparser
-//app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Express session
 app.use(session({
@@ -55,6 +54,6 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 80;
 
 app.listen(PORT, '0.0.0.0', console.log(`server running on port ${PORT}`));
