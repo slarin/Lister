@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const flash = require('connect-flash');
 const session = require('express-session');
+const memoryStore = require('memorystore')(session);
 const passport = require('passport');
 if(process.env.NODE_ENV !== 'production'){require('dotenv').config();}
 
@@ -30,9 +31,13 @@ app.use(express.urlencoded({ extended: false }));
 
 // Express session
 app.use(session({
+  cookie: { maxAge: 86400000 },
+  store: new memoryStore({ 
+    checkPeriod: 86400000
+  }),
   secret: 'secret',
-  resave: true,
-  saveUninitialized: true,
+  //resave: true,
+  //saveUninitialized: true,
 }));
 
 // Passport middleware
