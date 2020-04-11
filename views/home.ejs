@@ -83,7 +83,7 @@
 .logo-hldr {
   border-radius: 4px;
   height: 5vh;
-  width: 3vw;
+  width: 4vw;
   max-width: 10vw;
   margin: 5vh 0 0 0;
   z-index: 2;
@@ -99,7 +99,7 @@
   text-align: end;
   font-size: 2.5em;
   color: #ffffff;
-  max-width: 60vw;
+  max-width: 70vw;
   margin: 35vh 10vw 10vh 10vw;
   display: block;
   -webkit-animation: flicker-in-1 2s linear both;
@@ -415,7 +415,8 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 50px 0;
+  margin: 20px 0;
+  align-items: center;
 }
 .engines {
   width: 45vw;
@@ -505,6 +506,7 @@
     height: 12vh;
     width: 70vw;
     margin: 10px;
+    padding: 0;
  }
 }
 @media(max-width: 500px) {
@@ -518,13 +520,16 @@
     align-items: center;
   }
   #banner-txt {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin: 25vh 10vw 10vh 10vw;
   }
   .content { font-size: 15px; }
   .jacket-div { width: 40vw; }
-  .gyro-div { height: 65vh; }
-  .sailors { height: 30vh; }
+  .gyro-div { 
+    height: 45vh;
+    margin: 10px 0;
+  }
+  .sailors { height: 40vh; }
   .sailors-div { margin: 10px 20px; }
   .eng-div p { margin: 20px; }
   .rains { 
@@ -539,7 +544,6 @@
   }
 }
 @media(max-width: 380px) {
-  #banner-txt { font-size: 1.8em; }
   .cta { 
     margin: 5vh 10vw 0 0;
     font-size: 0.8em;
@@ -569,7 +573,7 @@
         <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
         <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
         <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.1)" />
       </g>
     </svg>
   </div>
