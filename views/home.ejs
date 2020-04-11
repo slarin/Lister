@@ -18,7 +18,9 @@
   text-align: center;
 }
 .waves {
-  position:relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height:30vh;
   margin-bottom:-7px; /*Fix for safari gap*/
@@ -363,6 +365,7 @@
   flex-direction: row nowrap;
   justify-content: space-around;
   margin: 30px 0;
+  padding: 10px;
 }
 .desp-img {
   height: inherit;
@@ -444,7 +447,7 @@
   height: 53px;
   width: 335px;
   font-size: 40px;
-  margin-top: 50px;
+  margin: 30px 0;
   align-self: center;
   text-align: center;
   border: 2px solid #3d3d3d;
@@ -498,18 +501,31 @@
  }
  .trumpet { align-self: center; }
  .add-btn {
-   font-size: 30px;
-   width: 280px;
+    font-size: 2em;
+    height: 12vh;
+    width: 70vw;
+    margin: 10px;
  }
 }
 @media(max-width: 500px) {
+  .ja-gy {
+    flex-flow: column nowrap;
+  }
+  .ja-gy-st {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
   #banner-txt {
     font-size: 1.8em;
     margin: 25vh 10vw 10vh 10vw;
   }
   .content { font-size: 15px; }
+  .jacket-div { width: 40vw; }
   .gyro-div { height: 65vh; }
-  .sailors { height: 40vh; }
+  .sailors { height: 30vh; }
+  .sailors-div { margin: 10px 20px; }
   .eng-div p { margin: 20px; }
   .rains { 
     height: 40vh;
@@ -523,7 +539,6 @@
   }
 }
 @media(max-width: 380px) {
-  .jacket-div p { margin-left: 10px; }
   #banner-txt { font-size: 1.8em; }
   .cta { 
     margin: 5vh 10vw 0 0;
@@ -592,11 +607,11 @@
   <div class="sell">
     <p class="title-txt">Your safety is paramount to us.</p>
     <div class="ja-gy">
-      <div>
+      <div class="ja-gy-st">
         <div class="jacket-div"><img src="/images/family.jpg" alt="life jacket" class="desp-img"/></div>
         <p>from the very best life jackets,</p>
       </div>
-      <div>
+      <div class="ja-gy-st">
           <div class="gyro-div"><img src="/images/gyro2.jpg" alt="gyroscope" class="desp-img"/></div>
           <p>to first class gyroscopes - <span class="quip">our <br/>canoes will not capsize, we assure you.</span></p>
       </div>
