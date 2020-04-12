@@ -21,12 +21,15 @@ router.post('/register', (req, res) => {
   // Error handler
   if(!name||!email||!password||!password2) {
     errors.push({ msg: 'Please fill in all the fields'});
+    window.alert(errors);
   }
   if(password != password2) {
     errors.push({ msg: 'Passwords do not match'});
+    window.alert(errors);
   }
   if(password.length < 6) {
     errors.push({ msg: 'choose a longer password'});
+    window.alert(errors);
   }
   if(errors.length > 0){
     res.render('register', {
@@ -41,7 +44,7 @@ router.post('/register', (req, res) => {
       .then(user => {
         if(user) {
           errors.push({ msg: 'Email is already registered'})
-          console.log(errors);
+          window.alert(errors);
           res.render('register', {
             errors,
             name,
