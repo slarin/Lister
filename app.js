@@ -6,10 +6,14 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const memoryStore = require('memorystore')(session);
 const passport = require('passport');
+const favicon = require('serve-favicon');
 if(process.env.NODE_ENV !== 'production'){require('dotenv').config();}
 
 const app = express();
 app.use(express.static(path.join(__dirname, '/public')));
+
+//Favicon
+app.use(favicon(path.join(__dirname, 'public', '/images/favicon.ico')));
 
 // Passport
 require('./config/passport')(passport);

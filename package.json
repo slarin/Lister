@@ -26,7 +26,8 @@
     "memorystore": "^1.6.2",
     "mongoose": "^5.9.5",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
