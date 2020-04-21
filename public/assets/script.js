@@ -7,9 +7,13 @@ window.onload = function timer() {
   let lm = launchDate.getMonth();
   let m = today.getMonth(); 
 
-  let nd = Math.floor(difference/(1000*60*60*24));
+  let nd = Math.floor(difference /(1000*60*60*24));
   let nw = Math.floor(nd / 7);
   let nm = Math.floor(nw / 4);
+
+  if(nm > 1) {
+    document.getElementById('monther').innerHTML = 'months';
+  }
 
   document.getElementById('months').innerHTML = nm;
   document.getElementById('weeks').innerHTML = nw;
