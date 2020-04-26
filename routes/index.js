@@ -11,5 +11,10 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
     name: req.user.name
   }));
 
+//Dashboard->Invest
+router.get('/invest', ensureAuthenticated, (req, res) => 
+  res.render('invest')
+);
+
 
 module.exports = router;

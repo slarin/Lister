@@ -8,14 +8,31 @@ window.onload = function timer() {
   let m = today.getMonth(); 
 
   let nd = Math.floor(difference /(1000*60*60*24));
-  let nw = Math.floor(nd / 7);
-  let nm = Math.floor(nw / 4);
+  let nh = Math.floor((difference % (1000*60*60*24))/(1000*60*60));
+  let nm = Math.floor((difference % (1000*60*60))/(1000*60));
 
-  if(nm > 1) {
-    document.getElementById('monther').innerHTML = 'months';
+  if(nm == 1) {
+    document.getElementById('dayer').innerHTML = 'day';
+  }
+  if(nh == 1) {
+    document.getElementById('hourer').innerHTML = 'hour';
+  }
+  if(nd == 1) {
+    document.getElementById('minuter').innerHTML = 'minute';
   }
 
-  document.getElementById('months').innerHTML = nm;
-  document.getElementById('weeks').innerHTML = nw;
+  document.getElementById('minutes').innerHTML = nm;
+  document.getElementById('hours').innerHTML = nh;
   document.getElementById('days').innerHTML = nd;
+}
+
+function drain() {  
+  let x = document.getElementById('soot');
+  x.classList.add('haha');
+
+  setTimeout(dump, 2000);
+}
+
+function dump() {
+  window.open('https://san-wo-canoe.herokuapp.com/', '_self');
 }

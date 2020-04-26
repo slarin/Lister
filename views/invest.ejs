@@ -1,0 +1,63 @@
+<style>
+  .short-hero {
+    margin: 0 5vw;
+    height: 55vh;
+    background-image: url('/images/canoe.jpg');
+    background-size: cover;
+  }
+  .spread {
+    margin: -2vh 2vw 0 2vw;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    height: 45vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .text {
+    text-align: center;
+  }
+  .scam {
+    text-align: center;
+    margin: 20px 0;
+    display: block;
+    cursor: pointer;
+  }
+  .lure {
+    color: #d4418e;
+  }
+  .haha {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .thanks {
+    color: #1af006;
+    font-size: 30px;
+  }
+</style>
+
+<div class="container">
+  <div class="short-hero">
+
+  </div>
+
+  <div class="spread">
+    <p class="text">As you can see, we're pretty damn serious about this. Therefore...</p>
+    <p class="scam" onclick="drain()"><span class="lure">click</span> to transfer all your funds</p>
+  </div>
+
+  <div id="soot">
+    <p class="thanks">arigato</p>
+  </div>
+</div>
