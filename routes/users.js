@@ -41,7 +41,6 @@ router.post('/register', (req, res) => {
       .then(user => {
         if(user) {
           errors.push({ msg: 'Email is already registered'})
-          window.alert(errors);
           res.render('register', {
             errors,
             name,
@@ -64,8 +63,8 @@ router.post('/register', (req, res) => {
              newUser.password = hash;
              newUser.save()
               .then(user => {
-                res.flash('success_msg', 'Registered! Log in.');
-                res.redirect('/users/login');
+                //res.flash('success_msg', 'Registered! Log in.');
+                res.redirect('/login');
               })
               .catch(err => console.log(err));
            }))
