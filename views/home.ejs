@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
 /*waves background*/
 .waves-header {
-  background: linear-gradient(315deg, #d8bcbf 0%, #3ad4f0 74%);
-  color:white;
+  background: linear-gradient(60deg, #a0a0a0 0%, #f5f7fa 100%);
+  /*background: linear-gradient(315deg, #d8bcbf 0%, #3ad4f0 74%);*/
+  color: #ffffff;
   position: absolute;
   left: 0;
   top: 0;
@@ -353,15 +354,16 @@
   background-position:center;
   background-repeat:no-repeat;
   background-size:cover;
-  background-image: url(/images/space-ship.jpg);
+  background-image: url(/images/ekmeds-photos-boats.jpg);
 }
 .sell {
   min-height: 40vh;
 }
 .title-txt {
   margin: 10px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: 'Rancho', cursive;
+  text-align: center;
 }
 .ja-gy {
   display: flex;
@@ -410,10 +412,11 @@
   display: flex;
   flex-flow: column nowrap;
   padding: 10px 5vw;
-  background-color: #090b0e;
+  /*background-color: #090b0e;*/
+  background-color: #000000;
   box-shadow: rgba(0, 0, 0, 0.144) 2px 6px 6px;
 }
-.tech>p { text-align: right; color: #ff007b; }
+.tech>p { text-align: center; color: #ff007b; }
 .eng-div {
   display: flex;
   flex-flow: row nowrap;
@@ -527,7 +530,9 @@
    height: 22vh;
  }
  .footer { margin: 50px 10px 0px 10px; }
+ .parallax { min-height: 30vh; }
 }
+
 @media(max-width: 500px) {
   .ja-gy {
     flex-flow: column nowrap;
@@ -633,7 +638,7 @@
 <div class="content">
   <div class="parallax"></div>
   <div class="sell">
-    <p class="title-txt">Your safety is paramount to us.</p>
+    <p class="title-txt">your safety is paramount to us.</p>
     <div class="ja-gy">
       <div class="ja-gy-st">
         <div class="jacket-div"><img src="/images/family.jpg" alt="life jacket" class="desp-img"/></div>
@@ -652,7 +657,7 @@
   <div class="parallax"></div>
   <div class="sell">
     <div class="tech">
-      <p class="title-txt">We're proud about our tech<br/><span class="quip">so we flaunt it</span></p>
+      <p class="title-txt">we're proud about our tech<br/><span class="quip">so we flaunt it</span></p>
       <div class="eng-div">
         <div class="engines"><img src="/images/engine2.gif" alt="engines" class="desp-img"/></div>
         <div>
