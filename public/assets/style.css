@@ -21,7 +21,7 @@ a {
 .waves-header {
   text-align:center;
   background: linear-gradient(60deg, #b8c6db 0%, #f5f7fa 100%);
-  color:white;
+  color:rgb(224, 224, 224);
   position: absolute;
   left: 0;
   top: 0;
