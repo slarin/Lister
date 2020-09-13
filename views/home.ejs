@@ -25,14 +25,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height:40vh;
+  height: 60vh;
   margin-bottom:-7px; /*Fix for safari gap*/
   min-height:100px;
-  max-height:150px;
+  max-height:400px;
 }
 .waves-content {
   position: relative;
-  height: 40vh;
+  height: 80vh;
   text-align: center;
 }
 /* Waves Animation */
@@ -360,7 +360,7 @@
 }
 .title-txt {
   margin: 10px;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-family: 'Rancho', cursive;
   text-align: center;
 }
@@ -374,6 +374,7 @@
 .desp-img {
   height: inherit;
   width: inherit;
+  border-radius: 50%;
 }
 .jacket-div {
   width: 30vw;
@@ -447,6 +448,7 @@
   width: 100%;
   height: 50vh;
 }
+.rains>.desp-img { border-radius: 0; }
 .trumpet {
   display: flex;
   flex-flow: column nowrap;
@@ -529,7 +531,7 @@
   margin: 10px;
  }
  .parallax { min-height: 30vh; }
- .title-txt { font-size: 1.2em; }
+ .title-txt { font-size: 2.5em; }
 }
 
 @media(max-width: 500px) {
@@ -546,7 +548,7 @@
     font-size: 1.5em;
     margin: 25vh 10vw 10vh 10vw;
   }
-  .title-txt { font-size: 1.6em; }
+  .title-txt { font-size: 1.8em; }
   .content { font-size: 15px; }
   .jacket-div { 
     width: 40vw;
@@ -585,8 +587,16 @@
     height: 10vh;
   }
   .waves {
-    height: 20vh;
+    height: 90vh;
     min-height: 20vh;
+    max-height: 400px;
+  }
+}
+@media (max-width: 500px) {
+  .waves {
+    height: 60vh;
+    min-height: 20vh;
+    max-height: 200px;
   }
 }
 
